@@ -38,9 +38,9 @@ A responsive web application developed using HTML, CSS, and JavaScript for gener
 
 ## Developed By
 
-- Abdullah Al Numan
+- Abdullah Al Numan(Team Leader)
 - Team Members
 
-**Course:** Data Structure  
+**Course:** Data Structure
 **Semester:** 3rd Semester  
 European University of Bangladesh
