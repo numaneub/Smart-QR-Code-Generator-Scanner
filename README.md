@@ -1,2 +1,46 @@
-# Smart-QR-Code-Generator-Scanner
-A responsive Smart QR Code Generator and Scanner built using HTML, CSS, and JavaScript. The project includes QR generation, QR scanning, history management, Linear Search, Bubble Sort, dark mode, and PNG download functionality.
+# Smart QR Code Generator & Scanner
+
+A responsive web application developed using HTML, CSS, and JavaScript for generating and scanning QR codes.
+
+## Features
+
+- Generate QR Codes (URL, Phone, Email)
+- QR Code Scanner
+- Download QR Code as PNG
+- QR History
+- Linear Search
+- Bubble Sort
+- Dark Mode
+- Responsive Design
+
+## Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript (ES6)
+- QRCode.js
+- jsQR
+
+## Data Structures & Algorithms
+
+- Array
+- Linear Search
+- Bubble Sort
+
+## Project Structure
+
+```text
+├── index.html
+├── style.css
+├── script.js
+├── README.md
+```
+
+## Developed By
+
+- Abdullah Al Numan
+- Team Members
+
+**Course:** Data Structure  
+**Semester:** 3rd Semester  
+European University of Bangladesh
