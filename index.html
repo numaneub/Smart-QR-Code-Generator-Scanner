@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Smart QR Code Generator & Scanner</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="app">
+    <div id="mobileWarning" class="mobile-warning" style="display:none;">
+  <i class="fa-solid fa-triangle-exclamation"></i>
+  <span>For a better experience, please use Desktop mode.Thank you for your understanding!</span>
+  <button id="closeMobileWarning" class="mobile-warning-close">&times;</button>
+</div>
+
+    <header class="app-header">
+      <button id="themeToggle" class="theme-toggle" title="Toggle dark mode"><i class="fa-solid fa-sun"></i></button>
+
+      <div class="logo">
+        <i class="fa-solid fa-qrcode"></i>
+      </div>
+
+      <h1> Smart QR Code Generator & Scanner</h1>
+
+      <div class="stats-card">
+        <span class="stats-number" id="statsTotal">0</span>
+        <span class="stats-label">Total QR Generated</span>
+      </div>
+    </header>
+
+    <main class="layout">
+
+      <section class="card generator-card">
+        <h2 class="generate-title">Generate Your QR Code</h2>
+
+        <div class="field-group">
+          <select id="qrType">
+            <option value="url">URL</option>
+            <option value="phone">Phone Number</option>
+            <option value="email">Email</option>
+          </select>
+        </div>
+
+        <div class="field-group">
+          <label for="qrInput" id="qrInputLabel">Enter your website link</label>
+          <input type="text" id="qrInput" placeholder="e.g. eub.edu.bd">
+        </div>
+
+        <div class="button-row">
+          <button id="generateBtn" class="btn btn-primary">
+            <i class="fa-solid fa-qrcode btn-icon"></i>
+            Generate QR
+          </button>
+          <button id="downloadBtn" class="btn btn-secondary" disabled>
+            <i class="fa-solid fa-download btn-icon"></i>
+            Download
+          </button>
+          <button id="clearBtn" class="btn btn-ghost">
+            <i class="fa-solid fa-trash btn-icon"></i>
+            Clear
+          </button>
+        </div>
+
+        <p id="errorMsg" class="error-msg"></p>
+
+        <div class="qr-preview" id="qrPreview">
+          <span class="qr-placeholder">Your Generated QR code will appear here</span>
+        </div>
+        <p id="successMsg" class="success-msg"></p>
+      </section>
+      <section class="card scanner-card">
+        <h2 class="scan-title">Scan QR Code</h2>
+        <p class="hint">Position the QR code within the frame to scan it.</p>
+
+        <div class="button-row">
+          <button id="startScanBtn" class="btn btn-primary">
+            <i class="fa-solid fa-camera btn-icon"></i>
+            SCAN YOUR QR
+          </button>
+        </div>
+
+        <p id="scanError" class="error-msg"></p>
+
+        <div class="scanner-preview" id="scannerPreview">
+          <video id="scanVideo" playsinline autoplay muted></video>
+          <span class="qr-placeholder" id="scannerPlaceholder">Your camera preview will appear here</span>
+
+          <div class="scan-result-box" id="scanResultBox" style="display:none;">
+            <p class="hint">Congratulation! QR scanned successfully.
+            <div class="scan-result-row">
+              <p id="scanResultText" class="scan-result-text"></p>
+              <button id="copyResultBtn" class="btn btn-secondary btn-copy" title="Copy">
+                <i class="fa-solid fa-copy"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card history-card">
+        <h2 class="history-title">History</h2>
+        <p class="hint"><strong>We don't store your QR codes anywhere</strong> — so chill.</p>
+
+        <div class="field-group">
+          <div class="search-row">
+            <input type="text" id="searchInput" placeholder="Search history by value...">
+            <button id="searchBtn" class="btn btn-secondary">
+              <i class="fa-solid fa-magnifying-glass btn-icon"></i>
+              Search
+            </button>
+          </div>
+          <p id="searchResult" class="search-result"></p>
+        </div>
+        <div class="button-row">
+          <button id="sortBtn" class="btn btn-secondary">
+            <i class="fa-solid fa-arrow-down-a-z btn-icon"></i>
+            Sort History A2Z
+          </button>
+          <button id="clearHistoryBtn" class="btn btn-ghost">
+            <i class="fa-solid fa-trash btn-icon"></i>
+            Clear History
+          </button>
+        </div>
+
+        <ul id="historyList" class="history-list">
+          <li class="empty-state">Oops! No history to display.</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+  <footer class="app-footer">
+    <div class="team-card">
+      <h3>Project Developed By</h3>
+      <ul class="team-list">
+        <li><span class="team-name">Abdullah Al Numan </span><span class="team-id">250321097</span></li>
+        <li><span class="team-name">Hridita Mondol</span><span class="team-id">250321086</span></li>
+        <li><span class="team-name">Eshrat Jahan</span><span class="team-id">250321082</span></li>
+        <li><span class="team-name">Rana Ahmed</span><span class="team-id">250321093</span></li>
+
+      </ul>
+      <p class="team-meta">Department of CSE · European University of Bangladesh</p>
+      <p class="team-meta">Batch: 32B</p>
+    </div>
+    <p class="footer-tech">This project was developed according to our 3rd semester curriculum</p>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
