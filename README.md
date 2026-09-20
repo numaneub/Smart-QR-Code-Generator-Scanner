@@ -36,11 +36,10 @@ A responsive web application developed using HTML, CSS, and JavaScript for gener
 ├── README.md
 ```
 
-## Developed By
+## This project was developed and implemented as part of our sessional coursework at the university.
 
 - Abdullah Al Numan(Team Leader)
-- Team Members
+- Team Members(Hridita,ESHA,Rana)
 
 **Course:** Data Structure
-**Semester:** 3rd Semester  
 European University of Bangladesh
